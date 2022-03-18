@@ -32,11 +32,11 @@ jobs:
           go fmt $(go list ./... | grep -v /vendor/)
           go vet $(go list ./... | grep -v /vendor/)
           go test -race $(go list ./... | grep -v /vendor/)
-      # - name: Static check 👮‍♂️
-      #   uses: dominikh/staticcheck-action@v1.1.0
-      #   with:
-      #     install-go: false
       - name: Static check 👮‍♂️
-        run: |
-          go install honnef.co/go/tools/cmd/staticcheck@latest
-          staticcheck
+        uses: dominikh/staticcheck-action@v1.1.0
+        with:
+          install-go: false
+      # - name: Static check 👮‍♂️
+      #   run: |
+      #     go install honnef.co/go/tools/cmd/staticcheck@latest
+      #     staticcheck
