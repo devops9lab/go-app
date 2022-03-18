@@ -37,16 +37,10 @@ release:
     owner: devops9lab
     # project name
     name: go-app
+  prerelease: auto
 changelog:
   sort: asc
   filters:
     exclude:
       - '^docs:'
       - '^test:'
-
-github_urls:
-  api: https://github.com/api/v3/
-  upload: https://github.com/api/uploads/
-  download: https://github.com/
-  # set to true if you use a self-signed certificate
-  skip_tls_verify: false
