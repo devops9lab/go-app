@@ -13,12 +13,14 @@ on:
         required: false
         default: "Manual trigger"
 
-permissions:
-  contents: write
+# permissions:
+#   contents: write
 
 jobs:
   release:
     runs-on: ubuntu-20.04
+    permissions:
+      contents: write
     environment: prod
     steps:
       - uses: actions/checkout@v2
