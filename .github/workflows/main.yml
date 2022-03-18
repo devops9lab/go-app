@@ -34,3 +34,5 @@ jobs:
           go test -race $(go list ./... | grep -v /vendor/)
       - name: Static check 👮‍♂️
         uses: dominikh/staticcheck-action@v1.1.0
+        with:
+          install-go: false
