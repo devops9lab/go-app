@@ -19,8 +19,8 @@ on:
         required: false
         default: "Manual trigger"
 
-permissions:
-  contents: write
+# permissions:
+#   contents: write
 
 jobs:
   release:
